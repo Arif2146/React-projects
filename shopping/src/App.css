@@ -4,6 +4,8 @@
 
 body {
   font-family: 'Atomic Age', sans-serif;
-  padding: 20px,80px;
+   padding: 20px 40px;
 };
-
+* {
+  box-sizing: border-box;
+}

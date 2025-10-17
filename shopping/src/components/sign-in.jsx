@@ -1,50 +1,63 @@
-import "./sign-in.css"
-import React from "react"
-
+import "./sign-in.css";
+import React from "react";
+import FormInput from "./form";
+import CosBtn from "./cosbtn";
 
 class SignIn extends React.Component {
-    constructor(props){
-        super(props)
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            email: "",
-            password: ""
-        }
-    }
+    this.state = {
+      email: "",
+      password: "",
+    };
+  }
 
-handelSubmit = (event) => {
+  handelSubmit = (event) => {
     event.preventDefault();
 
     this.setState({
-        email: '',
-        password: ''
-    })
-
-}
-handelchange = event => {
-    const {value,name} =event.target
-    this.setState({
-        [name]:value
+      email: "",
+      password: "",
     });
+  };
+  handelchange = (event) => {
+    const { value, name } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
 
+  render() {
+    return (
+      <div className="sign-in">
+        <h2>I already have an account</h2>
+        <span>Sign in with your email and password</span>
+
+        <form onSubmit={this.handelSubmit}>
+          <FormInput
+            type="email"
+            name="email"
+            label="Email"
+            value={this.state.email}
+            handleChange={this.handelchange}
+            required
+          />
+
+          <FormInput
+            type="password"
+            name="password"
+            label="Password"
+            value={this.state.password}
+            handleChange={this.handelchange}
+            required
+          />
+
+          <CosBtn type="submit">Sign In</CosBtn>
+        </form>
+      </div>
+    );
+  }
 }
 
-    render(){
-        return(
-            <div className="sign-in">
-                 <h2>I already have an account</h2>
-                 <span>Sign in with your email and password</span>
-
-            <form onSubmit={this.handelSubmit}>
-                <input type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handelchange} required/>
-                <label>Email</label>
-                <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handelchange} required/>
-                <label>Password</label>
-                <input type="submit" value="Submit Form"/>
-            </form>
-            </div>
-        )
-    }
-    }
-
-    export default SignIn;
+export default SignIn;
