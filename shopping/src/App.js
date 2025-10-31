@@ -5,18 +5,32 @@ import {  Routes, Route } from "react-router-dom";
 import ShopPage from './pages/shop';
 import Header from './components/header';
 import Signinup from './pages/signinup';
+import {auth} from './firebase/firebase-utils';
 
 
 
 
 
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Homepage />} />
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      currentUser: null
+    }; 
+  }
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged (user => {
+      this.setState({ currentUser: user });
+      console.log(user);
+    });
+  }
+  render() {
+    return (
+      <div>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
         <Route path="/shop" element={< ShopPage/>} />   
         <Route path="/signinup" element={< Signinup/>} />         
       </Routes>
@@ -24,5 +38,5 @@ function App() {
     </div>
   );
 }
-
+}
 export default App;

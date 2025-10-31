@@ -2,6 +2,8 @@ import "./sign-in.css";
 import React from "react";
 import FormInput from "./form";
 import CosBtn from "./cosbtn";
+import {signInWithGoogle} from "../firebase/firebase-utils";
+
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -54,6 +56,8 @@ class SignIn extends React.Component {
           />
 
           <CosBtn type="submit">Sign In</CosBtn>
+          <CosBtn onClick={signInWithGoogle}>
+          {''}Sign In with Google{''}</CosBtn>
         </form>
       </div>
     );
