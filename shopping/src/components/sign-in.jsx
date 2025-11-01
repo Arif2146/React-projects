@@ -54,10 +54,11 @@ class SignIn extends React.Component {
             handleChange={this.handelchange}
             required
           />
-
-          <CosBtn type="submit">Sign In</CosBtn>
-          <CosBtn onClick={signInWithGoogle}>
-          {''}Sign In with Google{''}</CosBtn>
+           <div className="tipa">
+            <CosBtn type="submit">Sign In</CosBtn>
+          <CosBtn onClick={signInWithGoogle} isGoogleSignIn>
+          Sign In with Google</CosBtn>
+            </div>      
         </form>
       </div>
     );

@@ -1,5 +1,5 @@
 .sign-in {
-    width: 30vw;
+    width: 380px;
     display: flex;
     flex-direction: column;
    
@@ -9,3 +9,7 @@
         margin: 10px 0;
     }
 
+.tipa {
+    display: flex;
+    gap: 20px;
+}

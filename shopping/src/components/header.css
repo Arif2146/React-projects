@@ -22,6 +22,7 @@
 
 .header .options .option {
   padding: 10px 15px;
+  cursor: pointer;
 }
 a{
   text-decoration: none;
