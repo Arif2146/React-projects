@@ -1,9 +1,10 @@
 import React from 'react';
+import diceImg1 from '../images/1.png';
 
 const Startgame = () => {
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md text-center">
-      
+    <div>
+      <img src={diceImg1} alt="Game Logo" />
     </div>
   )
 }
