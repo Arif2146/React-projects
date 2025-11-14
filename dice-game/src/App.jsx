@@ -1,4 +1,6 @@
-import Startgame from "./components/startgame";
+
+import Startgame from "./components/Startgame";
+import "./App.css";
 
 
 
