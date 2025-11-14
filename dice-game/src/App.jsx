@@ -1,5 +1,11 @@
+import Startgame from "./components/startgame";
+
+
+
 function App() {
-  return <> </>;
+  return <> 
+    <Startgame />
+  </>;
 }
 
 export default App;
