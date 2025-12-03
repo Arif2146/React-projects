@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
+import type { JSX } from "react/jsx-runtime";
 const vertexShaderSource = `
   attribute vec4 a_position;
   void main() {
