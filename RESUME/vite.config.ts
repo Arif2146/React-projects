@@ -15,7 +15,6 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-   base: 'React-projects/RESUME/',
   plugins: [
     react(),
     tailwindcss(),
