@@ -1,5 +1,7 @@
 "use client";
 
+
+
 import { useState } from "react";
 import { DragOrderList } from "../lightswind/DragOrderList";
 import { motion } from "framer-motion";
@@ -8,43 +10,43 @@ export const ProjectsSection = () => {
   const [projects] = useState([
     {
       id: 1,
-      title: "AI-Powered Design Automation Platform",
+      title: "REACT E-COMMERCE SHOP",
       subtitle:
-        "Developed an AI-driven platform that automates design workflows for global e-commerce brands...",
-      date: "2024",
-      link: "https://example.com/ai-platform",
+        "Developed a full-featured e-commerce application using React, Redux, and Firebase...",
+      date: "2025",
+      link: "https://react-projects-peach-eight.vercel.app/",
       image:
-        "https://images.pexels.com/photos/8294591/pexels-photo-8294591.jpeg",
+        "https://692fe0d952213e0bf969ed0d.imgix.net/react.png",
     },
     {
       id: 2,
-      title: "Enterprise Resource Planning (ERP) System",
+      title: "ROCK PAPER SCISSORS LIZARD SPOCK GAME",
       subtitle:
-        "Led the development of a modular ERP system for a manufacturing conglomerate...",
-      date: "2023",
-      link: "https://example.com/erp",
+        "DEVELOPED A CLASSIC ROCK PAPER SCISSORS LIZARD SPOCK GAME USING HTML, CSS, AND JAVASCRIPT...",
+      date: "2024",
+      link: "https://arifb.neocities.org/rock/",
       image:
-        "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg",
+        "https://692fe0d952213e0bf969ed0d.imgix.net/rock.png",
     },
     {
       id: 3,
-      title: "Blockchain-Based Supply Chain Tracker",
+      title: "PONG GAME",
       subtitle:
-        "Created a transparent and tamper-proof supply chain tracking system using Hyperledger Fabric...",
-      date: "2022",
-      link: "https://example.com/supplychain",
+        "CREATED A CLASSIC PONG GAME USING HTML, CSS, AND JAVASCRIPT...",
+      date: "2024",
+      link: "https://arifb.neocities.org/pong/",
       image:
-        "https://images.pexels.com/photos/6169673/pexels-photo-6169673.jpeg",
+        "https://692fe0d952213e0bf969ed0d.imgix.net/pong.png",
     },
     {
       id: 4,
-      title: "Global E-Learning Platform",
+      title: "INTRODUCTORY PROJECT",
       subtitle:
-        "Designed and implemented a multi-language e-learning platform serving over 1.2 million students...",
-      date: "2021",
-      link: "https://example.com/elearning",
+        "DEVELOPED A PERSONAL INTRODUCTORY WEBPAGE USING HTML AND CSS...",
+      date: "2024",
+      link: "https://arifbepari.neocities.org/ ",
       image:
-        "https://images.pexels.com/photos/15595050/pexels-photo-15595050.jpeg",
+        "https://692fe0d952213e0bf969ed0d.imgix.net/resume.png",
     },
   ]);
 
