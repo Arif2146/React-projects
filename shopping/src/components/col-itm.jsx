@@ -1,7 +1,10 @@
 import "./col-itm.css"
 import  CosBtn from './cosbtn';
+import {connect} from 'react-redux' 
+import {addItem} from '../redux/cart/action'
 
-const CollectionItem =({id,name,price,imageUrl})=>{
+const CollectionItem =({item,addItem})=>{
+    const{name,price,imageUrl}=item;
     return(
         <div className="collection-item">
             <div 
@@ -14,8 +17,12 @@ const CollectionItem =({id,name,price,imageUrl})=>{
                 <span className="name">{name}</span>
                 <span className="price">{price}</span>
             </div>
-            <CosBtn inverted>Add to cart</CosBtn>
+            <CosBtn onclick{()=>addItem(item)} inverted>Add to cart</CosBtn>
             </div>
 )
 }
-export default CollectionItem;
+const mapDispatchToProps = dispatch =>({
+    addItem: item => dispatch(addItem(item))
+})
+
+export default connect(null,mapDispatchToProps)(CollectionItem);
