@@ -1,4 +1,5 @@
 import "./col-itm.css"
+import  CosBtn from './cosbtn';
 
 const CollectionItem =({id,name,price,imageUrl})=>{
     return(
@@ -13,9 +14,8 @@ const CollectionItem =({id,name,price,imageUrl})=>{
                 <span className="name">{name}</span>
                 <span className="price">{price}</span>
             </div>
+            <CosBtn inverted>Add to cart</CosBtn>
             </div>
-   
-    )
+)
 }
-
 export default CollectionItem;
