@@ -17,7 +17,7 @@ const CollectionItem =({item,addItem})=>{
                 <span className="name">{name}</span>
                 <span className="price">{price}</span>
             </div>
-            <CosBtn onclick{()=>addItem(item)} inverted>Add to cart</CosBtn>
+            <CosBtn onclick={()=>addItem(item)} inverted>Add to cart</CosBtn>
             </div>
 )
 }
